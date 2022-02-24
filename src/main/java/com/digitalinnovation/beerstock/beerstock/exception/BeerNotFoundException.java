@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class BeerNotFoundException extends Exception {
-    public BeerNotFoundException(String name) {
-        super("Beer not found with name: " + name);
+    public BeerNotFoundException(String beerName) {
+        super(String.format("Beer not found with name: " + beerName));
     }
 
     public BeerNotFoundException(Long id) {
-        super("Beer not found with ID: " + id);
+        super(String.format("Beer not found with ID: " + id));
     }
 }
